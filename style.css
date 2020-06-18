@@ -1,0 +1,715 @@
+body {
+  margin: 0;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.time-control {
+ 
+}
+
+#date{
+  display: none;
+}
+.bootstrap-select.btn-group .dropdown-menu, .dropdown-menu {
+  padding: 5px 0;
+  border-radius: 3px;
+  overflow: visible;
+  margin-top: 3px;
+  font-size: 13px;
+  z-index: 21;
+  -webkit-animation: .3s slideUpAnimation;
+  -moz-animation: .3s slideUpAnimation;
+  -o-animation: .3s slideUpAnimation;
+  -ms-animation: slideUpAnimation .3s ease 0s;
+  animation: .3s slideUpAnimation;
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.5);
+  box-shadow: 0 1px 3px rgba(0,0,0,.5);
+  border: 0;
+}
+.dropdown-menu-left {
+  left: 0;
+  right: auto;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  float: left;
+  min-width: 160px;
+  margin: 2px 0 0;
+  list-style: none;
+  background-color: #fff;
+  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+#kimono-sunAnimator {
+  bottom: 10px;
+  left: 10px;
+}
+
+.dropup .dropdown-menu, .navbar-fixed-bottom .dropdown .dropdown-menu {
+  top: auto;
+  bottom: 100%;
+  margin-bottom: 1px;
+}
+#kimono-sunAnimatorMenu {
+	position: absolute;
+  left: 0;
+  z-index: 4444;
+	bottom: 0
+}
+.open>.dropdown-menu {
+	display: block
+}
+#kimono-sunAnimatorMenu .kimono-dropdownTitle {
+	white-space: nowrap;
+	padding: 5px 30px 5px 0;
+	margin: 0 15px;
+	font-weight: 700;
+	position: initial
+}
+
+#kimono-sunAnimatorMenu .noUi-horizontal {
+	width: 60%;
+	margin: 15px auto auto;
+	display: inline-block;
+	vertical-align: middle
+}
+
+#kimono-sunAnimatorMenu .noUi-handle {
+	cursor: e-resize;
+	border-color: #ffb90c;
+	background: #ffb90c;
+	-webkit-box-shadow: none;
+	box-shadow: none
+}
+
+#kimono-sunAnimatorMenu .kimono-sunPositionBtn {
+	display: inline-block;
+	width: 20%;
+	text-align: center;
+	cursor: pointer;
+	margin-top: 15px;
+	vertical-align: middle;
+	font-weight: 700
+}
+
+#kimono-sunAnimatorMenu .kimono-sunPositionBtn:hover {
+	color: #0dabd0
+}
+
+#kimono-sunAnimatorMenu .kimono-indicEst,
+#kimono-sunAnimatorMenu .kimono-indicWest {
+	position: absolute;
+	bottom: 15px;
+	color: #fff;
+	margin: 5px;
+	font-size: 11px;
+	width: 50px;
+	text-align: center;
+	font-weight: 700;
+	-webkit-animation: .3s scaleIn;
+	-moz-animation: .3s scaleIn;
+	-o-animation: .3s scaleIn;
+	-ms-animation: scaleIn ease .3s;
+	animation: .3s scaleIn
+}
+
+#kimono-sunAnimatorMenu .kimono-indicEst {
+	left: 50px
+}
+
+#kimono-sunAnimatorMenu .kimono-indicWest {
+	right: 50px
+}
+
+#kimono-sunAnimatorMenu .kimono-line {
+	background: rgba(255, 255, 255, .4);
+	width: 1px;
+	height: 300px;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	-webkit-transform-origin: bottom;
+	-moz-transform-origin: bottom;
+	-o-transform-origin: bottom;
+	-ms-transform-origin: bottom;
+	transform-origin: bottom;
+	-webkit-animation: 1s fadeInAnimation;
+	-moz-animation: 1s fadeInAnimation;
+	-o-animation: 1s fadeInAnimation;
+	-ms-animation: fadeInAnimation ease 1s;
+	animation: 1s fadeInAnimation
+}
+
+#kimono-sunAnimatorMenu .kimono-line.line1 {
+	-webkit-transform: rotateZ(-75deg);
+	-moz-transform: rotateZ(-75deg);
+	-o-transform: rotateZ(-75deg);
+	-ms-transform: rotateZ(-75deg);
+	transform: rotateZ(-75deg)
+}
+
+#kimono-sunAnimatorMenu .kimono-line.line2 {
+	-webkit-transform: rotateZ(-60deg);
+	-moz-transform: rotateZ(-60deg);
+	-o-transform: rotateZ(-60deg);
+	-ms-transform: rotateZ(-60deg);
+	transform: rotateZ(-60deg)
+}
+
+#kimono-sunAnimatorMenu .kimono-line.line3 {
+	-webkit-transform: rotateZ(-45deg);
+	-moz-transform: rotateZ(-45deg);
+	-o-transform: rotateZ(-45deg);
+	-ms-transform: rotateZ(-45deg);
+	transform: rotateZ(-45deg)
+}
+
+#kimono-sunAnimatorMenu .kimono-line.line4 {
+	-webkit-transform: rotateZ(-30deg);
+	-moz-transform: rotateZ(-30deg);
+	-o-transform: rotateZ(-30deg);
+	-ms-transform: rotateZ(-30deg);
+	transform: rotateZ(-30deg)
+}
+
+#kimono-sunAnimatorMenu .kimono-line.line5 {
+	-webkit-transform: rotateZ(-15deg);
+	-moz-transform: rotateZ(-15deg);
+	-o-transform: rotateZ(-15deg);
+	-ms-transform: rotateZ(-15deg);
+	transform: rotateZ(-15deg)
+}
+
+#kimono-sunAnimatorMenu .kimono-line.line7 {
+	-webkit-transform: rotateZ(15deg);
+	-moz-transform: rotateZ(15deg);
+	-o-transform: rotateZ(15deg);
+	-ms-transform: rotateZ(15deg);
+	transform: rotateZ(15deg)
+}
+
+#kimono-sunAnimatorMenu .kimono-line.line8 {
+	-webkit-transform: rotateZ(30deg);
+	-moz-transform: rotateZ(30deg);
+	-o-transform: rotateZ(30deg);
+	-ms-transform: rotateZ(30deg);
+	transform: rotateZ(30deg)
+}
+
+#kimono-sunAnimatorMenu .kimono-line.line9 {
+	-webkit-transform: rotateZ(45deg);
+	-moz-transform: rotateZ(45deg);
+	-o-transform: rotateZ(45deg);
+	-ms-transform: rotateZ(45deg);
+	transform: rotateZ(45deg)
+}
+
+#kimono-sunAnimatorMenu .kimono-line.line10 {
+	-webkit-transform: rotateZ(60deg);
+	-moz-transform: rotateZ(60deg);
+	-o-transform: rotateZ(60deg);
+	-ms-transform: rotateZ(60deg);
+	transform: rotateZ(60deg)
+}
+
+#kimono-sunAnimatorMenu .kimono-line.line11 {
+	-webkit-transform: rotateZ(75deg);
+	-moz-transform: rotateZ(75deg);
+	-o-transform: rotateZ(75deg);
+	-ms-transform: rotateZ(75deg);
+	transform: rotateZ(75deg)
+}
+
+#kimono-sunAnimatorMenu .kimono-line.line1,
+#kimono-sunAnimatorMenu .kimono-line.line11,
+#kimono-sunAnimatorMenu .kimono-line.line3,
+#kimono-sunAnimatorMenu .kimono-line.line5,
+#kimono-sunAnimatorMenu .kimono-line.line7,
+#kimono-sunAnimatorMenu .kimono-line.line9 {
+	background: rgba(255, 255, 255, .2)
+}
+
+#kimono-sunAnimatorMenu #kimono-sunSvg {
+	position: absolute
+}
+
+#kimono-sunPositionAnimation {
+	position: relative;
+	width: 100%;
+	margin: auto;
+	-webkit-background-size: 100%;
+	-moz-background-size: 100%;
+	background-size: 100%;
+	overflow: hidden
+}
+
+#kimono-sky {
+	background: url(https://res.bienici.com/cacheForever/fc36844174cb9f4523d6f90c24d509773b2c266d/images/sky.jpg) 0 0/auto 100%;
+	position: absolute;
+	left: 0;
+	-webkit-transform: scaleX(1000);
+	-moz-transform: scaleX(1000);
+	-o-transform: scaleX(1000);
+	-ms-transform: scaleX(1000);
+	transform: scaleX(1000);
+	top: 0;
+	z-index: 0;
+	width: 1px;
+	-webkit-background-size: auto 100%;
+	-moz-background-size: auto 100%;
+	bottom: 0;
+	background-position-x: 0
+}
+
+#kimono-sunAnimator {
+	bottom: 10px;
+	left: 10px
+}
+
+.kimono-ground {
+	position: absolute;
+	bottom: 0;
+	background: url(https://res.bienici.com/cacheForever/3cc3857fb9c9550f2391663895d53efd35dcb9cc/images/skyline.png) 0 0/cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100px;
+	-webkit-animation: .5s slideUpAnimation2;
+	-moz-animation: .5s slideUpAnimation2;
+	-o-animation: .5s slideUpAnimation2;
+	-ms-animation: slideUpAnimation2 ease .5s;
+	animation: .5s slideUpAnimation2
+}
+
+#kimono-sunPosition {
+	position: absolute;
+	left: 0;
+	width: 16px;
+	height: 16px;
+	background: #ffb90c;
+	border-radius: 50%;
+	top: 0;
+	margin: -8px;
+	-webkit-box-shadow: 0 0 10px #fff;
+	box-shadow: 0 0 10px #fff;
+	z-index: 1
+}
+
+.kimono-sunAnimatorActions {
+	padding: 0 15px 15px
+}
+
+#kimono-dateSelector {
+	font-weight: 700;
+	cursor: pointer;
+	font-size: 16px;
+	display: inline-block;
+	margin: 10px auto 0;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border: 0;
+	background: rgba(255, 255, 255, .2);
+	color: #fff;
+	-webkit-animation: .5s scaleIn;
+	-moz-animation: .5s scaleIn;
+	-o-animation: .5s scaleIn;
+	-ms-animation: scaleIn ease .5s;
+	animation: .5s scaleIn
+}
+
+#kimono-dateSelector:active,
+#kimono-dateSelector:focus,
+#kimono-dateSelector:hover {
+	border: none;
+	outline: 0
+}
+
+.kimono-dateSelectorContainer {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	left: 0;
+	text-align: center
+}
+#kimono-toggleSunAnimationButton {
+	position: absolute;
+	bottom: 60px;
+	left: 10px;
+	background: url(https://res.bienici.com/cacheForever/599e2ebfaf89a7d97d43aee6726f2d59352ff08e/images/sun/sun_default.png) center center/80% no-repeat #fff;
+	line-height: 40px;
+	text-align: center;
+	width: 85px;
+	height: 80px;
+	-webkit-background-size: 80%;
+	-moz-background-size: 80%;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .26);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .26)
+}
+
+#kimono-toggleSunAnimationButton:hover,
+.open #kimono-toggleSunAnimationButton {
+	color: #0dabd0;
+	background-image: url(https://res.bienici.com/cacheForever/8523c0b0a27457233b14a8d3aa6356ca6815997b/images/sun/sun_hover.png)
+}
+
+@-moz-keyframes slideUpAnimation {
+	from {
+		-webkit-box-shadow: 0 0 0 rgba(0, 0, 0, .5);
+		box-shadow: 0 0 0 rgba(0, 0, 0, .5);
+		opacity: 0;
+		-webkit-transform: scale(.9);
+		-moz-transform: scale(.9);
+		-o-transform: scale(.9);
+		-ms-transform: scale(.9);
+		transform: scale(.9)
+	}
+	to {
+		-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .5);
+		box-shadow: 0 1px 3px rgba(0, 0, 0, .5);
+		opacity: 1;
+		-ms-filter: none;
+		filter: none;
+		-webkit-transform: scale(1);
+		-moz-transform: scale(1);
+		-o-transform: scale(1);
+		-ms-transform: scale(1);
+		transform: scale(1)
+	}
+}
+
+@-webkit-keyframes slideUpAnimation {
+	from {
+		-webkit-box-shadow: 0 0 0 rgba(0, 0, 0, .5);
+		box-shadow: 0 0 0 rgba(0, 0, 0, .5);
+		opacity: 0;
+		-webkit-transform: scale(.9);
+		-moz-transform: scale(.9);
+		-o-transform: scale(.9);
+		-ms-transform: scale(.9);
+		transform: scale(.9)
+	}
+	to {
+		-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .5);
+		box-shadow: 0 1px 3px rgba(0, 0, 0, .5);
+		opacity: 1;
+		-ms-filter: none;
+		filter: none;
+		-webkit-transform: scale(1);
+		-moz-transform: scale(1);
+		-o-transform: scale(1);
+		-ms-transform: scale(1);
+		transform: scale(1)
+	}
+}
+
+@-o-keyframes slideUpAnimation {
+	from {
+		-webkit-box-shadow: 0 0 0 rgba(0, 0, 0, .5);
+		box-shadow: 0 0 0 rgba(0, 0, 0, .5);
+		opacity: 0;
+		-webkit-transform: scale(.9);
+		-moz-transform: scale(.9);
+		-o-transform: scale(.9);
+		-ms-transform: scale(.9);
+		transform: scale(.9)
+	}
+	to {
+		-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .5);
+		box-shadow: 0 1px 3px rgba(0, 0, 0, .5);
+		opacity: 1;
+		-ms-filter: none;
+		filter: none;
+		-webkit-transform: scale(1);
+		-moz-transform: scale(1);
+		-o-transform: scale(1);
+		-ms-transform: scale(1);
+		transform: scale(1)
+	}
+}
+
+@keyframes slideUpAnimation {
+	from {
+		-webkit-box-shadow: 0 0 0 rgba(0, 0, 0, .5);
+		box-shadow: 0 0 0 rgba(0, 0, 0, .5);
+		opacity: 0;
+		-webkit-transform: scale(.9);
+		-moz-transform: scale(.9);
+		-o-transform: scale(.9);
+		-ms-transform: scale(.9);
+		transform: scale(.9)
+	}
+	to {
+		-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .5);
+		box-shadow: 0 1px 3px rgba(0, 0, 0, .5);
+		opacity: 1;
+		-ms-filter: none;
+		filter: none;
+		-webkit-transform: scale(1);
+		-moz-transform: scale(1);
+		-o-transform: scale(1);
+		-ms-transform: scale(1);
+		transform: scale(1)
+	}
+}
+
+@-moz-keyframes slideUpAnimation2 {
+	from {
+		opacity: 0;
+		-webkit-transform: translateY(30px);
+		-moz-transform: translateY(30px);
+		-o-transform: translateY(30px);
+		-ms-transform: translateY(30px);
+		transform: translateY(30px)
+	}
+	to {
+		opacity: 1;
+		-ms-filter: none;
+		filter: none;
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		-o-transform: translateY(0);
+		-ms-transform: translateY(0);
+		transform: translateY(0)
+	}
+}
+
+@-webkit-keyframes slideUpAnimation2 {
+	from {
+		opacity: 0;
+		-webkit-transform: translateY(30px);
+		-moz-transform: translateY(30px);
+		-o-transform: translateY(30px);
+		-ms-transform: translateY(30px);
+		transform: translateY(30px)
+	}
+	to {
+		opacity: 1;
+		-ms-filter: none;
+		filter: none;
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		-o-transform: translateY(0);
+		-ms-transform: translateY(0);
+		transform: translateY(0)
+	}
+}
+
+@-o-keyframes slideUpAnimation2 {
+	from {
+		opacity: 0;
+		-webkit-transform: translateY(30px);
+		-moz-transform: translateY(30px);
+		-o-transform: translateY(30px);
+		-ms-transform: translateY(30px);
+		transform: translateY(30px)
+	}
+	to {
+		opacity: 1;
+		-ms-filter: none;
+		filter: none;
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		-o-transform: translateY(0);
+		-ms-transform: translateY(0);
+		transform: translateY(0)
+	}
+}
+
+@keyframes slideUpAnimation2 {
+	from {
+		opacity: 0;
+		-webkit-transform: translateY(30px);
+		-moz-transform: translateY(30px);
+		-o-transform: translateY(30px);
+		-ms-transform: translateY(30px);
+		transform: translateY(30px)
+	}
+	to {
+		opacity: 1;
+		-ms-filter: none;
+		filter: none;
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		-o-transform: translateY(0);
+		-ms-transform: translateY(0);
+		transform: translateY(0)
+	}
+}
+
+
+
+.mapboxgl-control-container{
+	display: none;
+}
+.controle-main {
+    position: absolute;
+    left: 0;
+    z-index: 4;
+    bottom: 0;
+	margin-bottom: 25px;
+    margin-left: 25px;
+}
+.controle-btn {
+    font-size: 27px;
+    border: solid black 1px;
+    background: #fff;
+    padding: 1px 0;
+	width: 40px;
+	cursor: pointer;
+    text-align: center;
+    display: inline-block;
+}
+.controle-btn img{
+width: 50%;
+margin: 7px 0;
+}
+
+.map-warpp .map-container {
+    position: relative;
+	margin: 2px 0;
+	margin-top: 25px;
+    margin-left: 25px;
+    background: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.map-warpp .map-center {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    background: none;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 15px;
+    cursor: pointer;
+    -webkit-transition: all ease 0.2s;
+    -moz-transition: all ease 0.2s;
+    -o-transition: all ease 0.2s;
+    -ms-transition: all ease 0.2s;
+    transition: all ease 0.2s;
+    overflow: hidden;
+}
+.map-warpp .map-warpp-nav .map-container-needle {
+    background: url(compass_needle.png);
+}
+
+.map-warpp .map-container-needle {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: url(compass_needle.png);
+    background-repeat: no-repeat;
+}
+.map-warpp .map-warpp-nav .rotate-left, .map-warpp .map-warpp-nav .rotate-right {
+    background: url(compass_nav_new.png);
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+}
+.map-warpp .rotate-right {
+    right: -2px;
+    -webkit-transform: scale(-1,1);
+    -moz-transform: scale(-1,1);
+    -o-transform: scale(-1,1);
+    -ms-transform: scale(-1,1);
+    transform: scale(-1,1);
+}
+
+.map-warpp .rotate-left {
+    left: -2px;
+}
+.map-warpp .rotate-left, .map-warpp .rotate-right {
+    opacity: .5;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=50);
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    background: none;
+    position: absolute;
+    background-repeat: no-repeat;
+	width: 20px;
+	cursor: pointer;
+    height: 28px;
+    background-image: url(compass_nav_new.png);
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    background-size: 100%;
+    top: 10px;
+}
+@media (max-width: 992px){
+	.map-warpp .map-container{
+		width: 120px;
+		height: 120px;
+	}
+	.map-warpp .rotate-left, .map-warpp .rotate-right {
+
+	    width: 70px;
+	height: 90px;
+	top: 15px;
+	
+	}
+	.map-warpp .rotate-right {
+		right: -15px;
+	}
+	.map-warpp .rotate-left {
+		left: -15px;
+	}
+	.map-warpp .map-center {
+
+		left: 50%;
+		transform: translateX(-50%);
+	
+	}
+	.map-warpp .map-container-needle {
+	    position: relative;
+    width: 44px;
+    height: 43px;
+    background: url(compass_needle.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+	}
+	.controle-btn {
+		font-size: 27px;
+		border: solid black 1px;
+		background: #fff;
+		padding: 1px 0;
+		width: 80px;
+		cursor: pointer;
+		text-align: center;
+		display: inline-block;
+	}
+	.controle-btn img {
+		width: 50%;
+		margin: 20px 0;
+	}
+	.zoomout{
+		margin-right: 12px;
+	}
+}
