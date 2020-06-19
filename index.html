@@ -52,7 +52,7 @@
   </div>
   <div class="warpp range-slider">
     <input id="day" type="range" class="range-slider__range" min="1" max="365" /> <span id="day-text">Day</span>
-    <input id="time" class="range-slider__range" type="range" min="0" max="86400" /> <span id="time-text">Time</span>
+    <input id="time" class="range-slider__range" type="range" min="0" max="86400" value="0" /> <span id="time-text">Time</span>
   </div>
 
   <script>
@@ -148,7 +148,6 @@
         Math.sin(sunPos.altitude)
       );
 
-      console.log(position);
       console.log(sunPos);
     }
 
@@ -376,19 +375,19 @@
         this.scene = new THREE.Scene();
 
         // create two three.js lights to illuminate the model
-        this.directionalLight = new THREE.DirectionalLight(0xffffff);
+        this.directionalLight = new THREE.DirectionalLight(0xffffff,0.8);
         this.directionalLight.position.set(0, -7, 10).normalize();
         this.scene.add(this.directionalLight);
 
-        this.directionalLight2 = new THREE.DirectionalLight(0xffffff);
+        this.directionalLight2 = new THREE.DirectionalLight(0xffffff, 0.8);
         this.directionalLight2.position.set(0, 7, 1).normalize();
         this.scene.add(this.directionalLight2);
 
-        this.directionalLight3 = new THREE.DirectionalLight(0xdddddd);
+        this.directionalLight3 = new THREE.DirectionalLight(0xdddddd, 0.8);
         this.directionalLight3.position.set(-10, 0, -10).normalize();
         this.scene.add(this.directionalLight3);
 
-        this.directionalLight4 = new THREE.DirectionalLight(0xffffff);
+        this.directionalLight4 = new THREE.DirectionalLight(0xffffff, 0.4);
         this.directionalLight4.position.set(10, 0, -5).normalize();
         this.scene.add(this.directionalLight4);
 
@@ -397,6 +396,7 @@
         this.movingLight.target.position.set(0,0,0);
 
         this.movingLight.castShadow = true;
+
         this.scene.add(this.movingLight);
         this.scene.add(this.movingLight.target);
 
@@ -461,6 +461,8 @@
 
     map.on('style.load', function() {
       map.addLayer(customLayer, 'waterway-label');
+      setDirectionalLight();
+      
       // Insert the layer beneath any symbol layer.
       var layers = map.getStyle().layers;
 
@@ -508,6 +510,8 @@
         labelLayerId
       );
     });
+
+   
   </script>
 
 </body>
