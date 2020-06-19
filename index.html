@@ -377,12 +377,20 @@
 
         // create two three.js lights to illuminate the model
         this.directionalLight = new THREE.DirectionalLight(0xffffff);
-        this.directionalLight.position.set(0, -70, 100).normalize();
+        this.directionalLight.position.set(0, -7, 10).normalize();
         this.scene.add(this.directionalLight);
 
         this.directionalLight2 = new THREE.DirectionalLight(0xffffff);
-        this.directionalLight2.position.set(0, 70, 100).normalize();
+        this.directionalLight2.position.set(0, 7, 1).normalize();
         this.scene.add(this.directionalLight2);
+
+        this.directionalLight3 = new THREE.DirectionalLight(0xffffff);
+        this.directionalLight3.position.set(-10, 0, -10).normalize();
+        this.scene.add(this.directionalLight3);
+
+        this.directionalLight4 = new THREE.DirectionalLight(0xffffff);
+        this.directionalLight4.position.set(10, 0, -5).normalize();
+        this.scene.add(this.directionalLight4);
 
         // use the three.js GLTF loader to add the 3D model to the three.js scene
         var loader = new THREE.GLTFLoader();
