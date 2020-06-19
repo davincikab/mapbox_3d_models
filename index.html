@@ -138,14 +138,18 @@
     }
 
     function setDirectionalLight(){
-      var position = [0,-70,0]
       var loc = map.getCenter();
       var sunPos = SunCalc.getPosition(date, loc.lat, loc.lng);
       // console.log(sunPos.altitude);
 
-      customLayer.directionalLight2.position.set(1.5, 180 + sunPos.azimuth * 180 / Math.PI, 90 - sunPos.altitude * 180 / Math.PI).normalize();
-      customLayer.directionalLight.position.set(1.5, -180 + sunPos.azimuth * 180 / Math.PI, 90 + sunPos.altitude * 180 / Math.PI).normalize();
-      console.log(customLayer.directionalLight2);
+      customLayer.movingLight.position.set(
+        Math.sin(sunPos.azimuth) ,
+        Math.cos(sunPos.azimuth) ,
+        Math.sin(sunPos.altitude)
+      );
+
+      console.log(position);
+      console.log(sunPos);
     }
 
     function draw() {
@@ -191,10 +195,6 @@
 
 
       var isDay = sunPos.altitude > -0.833 * Math.PI / 180;
-
-
-
-
 
 
       map.setLight({
@@ -384,13 +384,21 @@
         this.directionalLight2.position.set(0, 7, 1).normalize();
         this.scene.add(this.directionalLight2);
 
-        this.directionalLight3 = new THREE.DirectionalLight(0xffffff);
+        this.directionalLight3 = new THREE.DirectionalLight(0xdddddd);
         this.directionalLight3.position.set(-10, 0, -10).normalize();
         this.scene.add(this.directionalLight3);
 
         this.directionalLight4 = new THREE.DirectionalLight(0xffffff);
         this.directionalLight4.position.set(10, 0, -5).normalize();
         this.scene.add(this.directionalLight4);
+
+        this.movingLight = new THREE.DirectionalLight(0xffffff, 0.8);
+        this.movingLight.position.set(0, 0, 0).normalize();
+        this.movingLight.target.position.set(0,0,0);
+
+        this.movingLight.castShadow = true;
+        this.scene.add(this.movingLight);
+        this.scene.add(this.movingLight.target);
 
         // use the three.js GLTF loader to add the 3D model to the three.js scene
         var loader = new THREE.GLTFLoader();
