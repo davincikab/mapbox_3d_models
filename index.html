@@ -384,7 +384,7 @@
         this.scene.add(this.directionalLight2);
 
         this.directionalLight3 = new THREE.DirectionalLight(0xdddddd, 0.8);
-        this.directionalLight3.position.set(-10, 0, -10).normalize();
+        this.directionalLight3.position.set(-10, 0, -5).normalize();
         this.scene.add(this.directionalLight3);
 
         this.directionalLight4 = new THREE.DirectionalLight(0xffffff, 0.4);
@@ -462,7 +462,7 @@
     map.on('style.load', function() {
       map.addLayer(customLayer, 'waterway-label');
       setDirectionalLight();
-      
+
       // Insert the layer beneath any symbol layer.
       var layers = map.getStyle().layers;
 
